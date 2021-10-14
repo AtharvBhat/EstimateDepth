@@ -1,7 +1,5 @@
 # EstimateDepth
-Single Image Depth Estimation project done for our computer vision class.
 
-# Problem statement :- 
 Predicting Depth from a single image is a difficult task. Multiple different arrangements of different objects in 3 dimensions may have the same 2d representation which makes it a many to one mapping. Thus estimating depth from a single image is a challenging task.
 
 At its core it is an Image -> Image translation task which has been tackled in multiple different ways. The simplest method would be to use a Fully convolutional neural network such as a UNET which is widely used in other image to image translation tasks such as image segmentation and train it in a supervised manner using an l1 or l2 penalty. 
@@ -20,6 +18,6 @@ https://cs.nyu.edu/~silberman/datasets/nyu_depth_v2.html
 ![alt text](https://github.com/AtharvBhat/EstimateDepth/blob/main/figures/UnetGAN.png?raw=true)
 
 # Team Members :- 
-* Atharv Bhat
-* Mayukh Ghosh
-* Valay Shah
+* Atharv Bhat (arb881@nyu.edu)
+* Mayukh Ghosh (mg5610@nyu.edu)
+* Valay Shah (vs2393@nyu.edu)
