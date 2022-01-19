@@ -11,10 +11,10 @@ In this project we aim to compare the performance of the same generator / transl
 We will be using the NYU-Depth-v2 Dataset for both training and evaluation
 https://cs.nyu.edu/~silberman/datasets/nyu_depth_v2.html
 
-# Model Trained with Content loss only (l1 / l2 loss)
+# Model Trained with Content loss only (l2 / scale invariant)
 ![alt text](https://github.com/AtharvBhat/EstimateDepth/blob/main/figures/Unetl2.png?raw=true)
 
-# Model Trained with a combination of Adversarial loss and Content loss
+# Model Trained with a combination of Adversarial loss and scale invariant Content loss
 ![alt text](https://github.com/AtharvBhat/EstimateDepth/blob/main/figures/UnetGAN.png?raw=true)
 
 # Results
@@ -22,11 +22,11 @@ We observed that the models trained withℓ2loss wasn’t able to accurately pre
 
 ![alt text](https://raw.githubusercontent.com/AtharvBhat/EstimateDepth/main/figures/result.png)
 
-UNet model trained with scale invariant lossis better than the UNet model trained with $\ell_2$ loss at predicting the depth of the scene butthe outputs lack detail and are blurry.  The depths predicted by the UNet Model trained with a combination of scale invariant and Adversarial loss have a much clearer and less blurry depth map prediction. Unfortunately, from the metrics, while the outputs look more plausible and realistic, they are inaccurate.
+UNet model trained with scale invariant lossis better than the UNet model trained with l2 loss at predicting the depth of the scene butthe outputs lack detail and are blurry.  The depths predicted by the UNet Model trained with a combination of scale invariant and Adversarial loss have a much clearer and less blurry depth map prediction. Unfortunately, from the metrics, while the outputs look more plausible and realistic, they are inaccurate.
 
 Our paper can be found [here](https://github.com/AtharvBhat/EstimateDepth/blob/main/CV_Project_Report.pdf)
 
-|Metric   |Unet($\ell$_2)   |  Unet(scale inv.) |  Unet(Adversarial) |
+|Metric   |Unet(l2)   |  Unet(scale inv.) |  Unet(Adversarial) |
 |---|:-:|:-:|:-:|
 | RMSE (linear)  | 2.0761  | 1.6827  | 4.2640  |
 | RMSE (log)  | 0.2648  | 0.2308  |  0.5531 |
